@@ -7,7 +7,7 @@
 
 # Site settings
 title: Kyle's Blog
-brief-intro: 生命不息 战斗不止
+brief-intro: Talk is cheap. Show me the code.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://kyle.net.cn" # the base hostname & protocol for your site
 
@@ -17,16 +17,16 @@ host: 0.0.0.0
 port: 9001
 
 # other links
-twitter_username: gaohaoyang126
-facebook_username: gaohaoyang.water
-github_username:  Gaohaoyang
-email: gaohaoyang126@126.com
-weibo_username: 3115521wh
-zhihu_username: gaohaoyang
-linkedIn_username: gaohaoyang
+github_username:  kylescript
+email: kyle.script@qq.com
+weibo_username: 
+zhihu_username: 
+linkedIn_username: 
 dribbble_username:
+facebook_username: 
+twitter_username: 
 
-description_footer:
+description_footer: 
 
 # comments
 # two ways to comment, only choose one, and use your own short name
