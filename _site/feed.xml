@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kyle's Blog</title>
+    <description></description>
+    <link>http://0.0.0.0:9001/</link>
+    <atom:link href="http://0.0.0.0:9001/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 07 Jun 2017 11:16:14 +0000</pubDate>
+    <lastBuildDate>Wed, 07 Jun 2017 11:16:14 +0000</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>使用flask-sqlalchemy扩展后，如何把Model类定义文件分散在不同的文件夹？</title>
+        <description>
+先看官方给的例子
+
+</description>
+        <pubDate>Wed, 07 Jun 2017 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:9001/2017/06/07/flask-sqlalchemy-import-problem/</link>
+        <guid isPermaLink="true">http://0.0.0.0:9001/2017/06/07/flask-sqlalchemy-import-problem/</guid>
+        
+        <category>flask</category>
+        
+        
+        <category>flask</category>
+        
+      </item>
+    
+      <item>
+        <title>如何为子域名配置一个单独web app？</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-添加子域名解析&quot; id=&quot;markdown-toc-1-添加子域名解析&quot;&gt;1. 添加子域名解析&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+本博客的域名是 kyle.net.cn 在后台服务器对应一个web app，怎样对一个子域名（test.kyle.net.cn）单独配置一个web app呢？
+&lt;h4 id=&quot;1-添加子域名解析&quot;&gt;1. 添加子域名解析&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;添加一条test子域名解析记录
+记录类型    主机记录     记录值
+A          test        120.120.120.120
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:9001/2017/06/06/custom-sub-domain-for-independent-web-app/</link>
+        <guid isPermaLink="true">http://0.0.0.0:9001/2017/06/06/custom-sub-domain-for-independent-web-app/</guid>
+        
+        <category>ubuntu</category>
+        
+        <category>nginx</category>
+        
+        
+        <category>nginx</category>
+        
+      </item>
+    
+      <item>
+        <title>nginx服务器在生产环境中日志切割与备份</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#定时执行任务&quot; id=&quot;markdown-toc-定时执行任务&quot;&gt;定时执行任务&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+nginx在生产环境如果项目访问量很大，日志文件通常会增长的比较大，这时候就需要定时切割日志文件，否则会影响到nginx性能。
+&lt;h4 id=&quot;定时执行任务&quot;&gt;定时执行任务&lt;/h4&gt;
+假如每天凌晨4点备份nginx日志，然后重启nginx服务器。 linux下定时任务通常都是使用crontab -e命令。在Ubuntu系统下默认是nano编辑器，可以使用以下命令切换编辑器：
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 切换为vi编辑器
+export EDITOR=vi 
+# 或者
+export VISUAL=vi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:9001/2017/06/05/nginx-log-backup/</link>
+        <guid isPermaLink="true">http://0.0.0.0:9001/2017/06/05/nginx-log-backup/</guid>
+        
+        <category>ubuntu</category>
+        
+        <category>nginx</category>
+        
+        
+        <category>nginx</category>
+        
+      </item>
+    
+      <item>
+        <title>如何统一微信服务号用户和App用户？</title>
+        <description>
+用户在关注微信服务号后就可以拿到用户对本服务号的唯一openid，进一步就可以获取用户基本数据。Web页面通过auth授权网页登录拿到openid，就可以用户无感知实现用户注册登录了。 但如果我们还有App端怎样保证同一个用户登录后数据统一？ 这就用到了App微信登录。
+
+</description>
+        <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:9001/2017/06/04/weixin-app-account/</link>
+        <guid isPermaLink="true">http://0.0.0.0:9001/2017/06/04/weixin-app-account/</guid>
+        
+        <category>weixin</category>
+        
+        
+        <category>weixin</category>
+        
+      </item>
+    
+      <item>
+        <title>如何在Web Server中使用七牛云存储资源？</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-免费申请七牛云帐号&quot; id=&quot;markdown-toc-1-免费申请七牛云帐号&quot;&gt;1. 免费申请七牛云帐号&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;1-免费申请七牛云帐号&quot;&gt;1. 免费申请七牛云帐号&lt;/h4&gt;
+注册帐号后，打开&lt;a href=&quot;https://portal.qiniu.com/create&quot;&gt;https://portal.qiniu.com/create&lt;/a&gt;，找到‘对象存储’官方资源，添加，新建存储空间
+
+</description>
+        <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:9001/2017/06/03/restore-resource-by-qiniu/</link>
+        <guid isPermaLink="true">http://0.0.0.0:9001/2017/06/03/restore-resource-by-qiniu/</guid>
+        
+        <category>qiniu</category>
+        
+        
+        <category>qiniu</category>
+        
+      </item>
+    
+      <item>
+        <title>Web Server开发中session应当如何存储用户登录凭据？</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-应用场景&quot; id=&quot;markdown-toc-1-应用场景&quot;&gt;1. 应用场景&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;1-应用场景&quot;&gt;1. 应用场景&lt;/h4&gt;
+Web Server验证用户登录成功后，拿到了用户登录凭据(能够唯一标识用户的东西)，一般来讲我们要把这个登录凭据放在session中，下次访问某连接的时候Web Server可以验证用户是否是在登录状态。
+在开发微信服务号后台时，微信网页授权成功后拿到是对于此服务号唯一用户标识openid，如果直接把openid放到session中是有风险的，万一被别人拿到，就能伪装此用户做一些危险的事情。
+
+</description>
+        <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:9001/2017/06/02/web-server-session/</link>
+        <guid isPermaLink="true">http://0.0.0.0:9001/2017/06/02/web-server-session/</guid>
+        
+        <category>session</category>
+        
+        <category>flask</category>
+        
+        
+        <category>flask</category>
+        
+      </item>
+    
+      <item>
+        <title>Ubuntu 16.04.2下配置nginx + uwsgi + flask + mysql</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#0准备工作&quot; id=&quot;markdown-toc-0准备工作&quot;&gt;0.准备工作&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;0准备工作&quot;&gt;0.准备工作&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update     # 更新配置文件
+sudo apt-get upgrade    # 安装更新
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:9001/2017/06/01/nginx-uwsgi-flask-mysql/</link>
+        <guid isPermaLink="true">http://0.0.0.0:9001/2017/06/01/nginx-uwsgi-flask-mysql/</guid>
+        
+        <category>flask</category>
+        
+        <category>ubuntu</category>
+        
+        <category>nginx</category>
+        
+        <category>uwsgi</category>
+        
+        <category>mysql</category>
+        
+        
+        <category>flask</category>
+        
+      </item>
+    
+  </channel>
+</rss>

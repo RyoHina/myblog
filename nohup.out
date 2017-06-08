@@ -1,0 +1,107 @@
+Configuration file: /home/myblog/_config.yml
+Configuration file: /home/myblog/_config.yml
+            Source: /home/myblog
+       Destination: /home/myblog/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.606 seconds.
+ Auto-regeneration: enabled for '/home/myblog'
+Configuration file: /home/myblog/_config.yml
+    Server address: http://0.0.0.0:9001/
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:28:39 ...done in 0.292840167 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:28:40 ...done in 0.315132425 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:28:40 ...done in 0.318210528 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:29:08 ...done in 0.27646679 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:29:09 ...done in 0.317922393 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:29:09 ...done in 0.322597299 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:29:23 ...done in 0.27656888 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:29:24 ...done in 0.325979548 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:29:24 ...done in 0.32861406 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:30:09 ...done in 0.264805244 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:30:09 ...done in 0.304601459 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:30:10 ...done in 0.300839361 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:32:28 ...done in 0.274058032 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:32:28 ...done in 0.298602099 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:32:28 ...done in 0.302516917 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:32:56 ...done in 0.258107752 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:32:56 ...done in 0.303745612 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:32:56 ...done in 0.300010206 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:33:15 ...done in 0.260449823 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:33:15 ...done in 0.29463608 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:33:16 ...done in 0.291680995 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:33:44 ...done in 0.261268718 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:33:45 ...done in 0.30073034 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:33:45 ...done in 0.301130814 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:33:53 ...done in 0.261427773 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:33:53 ...done in 0.317343209 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:33:54 ...done in 0.295343192 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:34:18 ...done in 0.263081782 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:34:18 ...done in 0.30825563 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:34:18 ...done in 0.302432156 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:34:42 ...done in 0.272798972 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:34:42 ...done in 0.300061877 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-06 23:34:43 ...done in 0.302249879 seconds.
+[2017-06-07 00:03:39] ERROR `/nginx-log-backup' not found.
+[2017-06-07 00:50:27] ERROR `/robots.txt' not found.
+[2017-06-07 05:05:55] ERROR `/nginx-log-backup' not found.
+[2017-06-07 05:05:56] ERROR `/restore-resource-by-qiniu' not found.
+[2017-06-07 05:06:08] ERROR `/nginx-log-backup' not found.
+[2017-06-07 05:20:42] ERROR `/restore-resource-by-qiniu' not found.
+      Regenerating: 2 file(s) changed at 2017-06-07 06:25:01 ...done in 0.425027424 seconds.
+[2017-06-07 08:26:59] ERROR `/restore-resource-by-qiniu' not found.
+[2017-06-07 08:34:39] ERROR `/restore-resource-by-qiniu' not found.
+Configuration file: /home/myblog/_config.yml
+Configuration file: /home/myblog/_config.yml
+            Source: /home/myblog
+       Destination: /home/myblog/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.603 seconds.
+ Auto-regeneration: enabled for '/home/myblog'
+Configuration file: /home/myblog/_config.yml
+    Server address: http://0.0.0.0:9001/
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:41 ...done in 0.461184742 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:44 ...done in 0.400310802 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:45 ...done in 0.451432379 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:45 ...done in 0.464518629 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:46 ...done in 0.449882024 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:47 ...done in 0.447907801 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:47 ...done in 0.453301086 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:49 ...done in 0.42616552 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:50 ...done in 0.452127224 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:51 ...done in 0.439622882 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:53 ...done in 0.432814441 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:54 ...done in 0.455704574 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:54 ...done in 0.444436978 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:55 ...done in 0.443155843 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:57 ...done in 0.43724093 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:58 ...done in 0.445199678 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:58 ...done in 0.405556251 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:59 ...done in 0.436584307 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:09:59 ...done in 0.448260161 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:10:00 ...done in 0.424697302 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:10:01 ...done in 0.470264117 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 10:10:01 ...done in 0.45635938 seconds.
+[2017-06-07 10:11:35] ERROR `/js/pageContent.js ' not found.
+[2017-06-07 10:11:36] ERROR `/about/ /js/main.js ' not found.
+[2017-06-07 10:11:36] ERROR `/about/ /js/smooth-scroll.min.js ' not found.
+      Regenerating: 1 file(s) changed at 2017-06-07 11:09:29 ...done in 0.455410409 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 11:09:32 ...done in 0.423134139 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 11:09:33 ...done in 0.420442173 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 11:09:34 ...done in 0.424278148 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 11:15:49 ...done in 0.457399949 seconds.
+      Regenerating: 1 file(s) changed at 2017-06-07 11:15:50 ...done in 0.458957617 seconds.
+      Regenerating: 2 file(s) changed at 2017-06-07 11:16:14 ...done in 0.45207681 seconds.
+[2017-06-07 11:40:57] ERROR `/tags/' not found.
+[2017-06-07 11:40:57] ERROR `/2017/06/nginx-uwsgi-flask-mysql/' not found.
+[2017-06-07 11:40:58] ERROR `/2017/06/flask-sqlalchemy-import-problem/' not found.
+[2017-06-07 11:40:58] ERROR `/tags/' not found.
+[2017-06-07 11:40:58] ERROR `/2017/06/nginx-uwsgi-flask-mysql/' not found.
+[2017-06-07 11:40:58] ERROR `/2017/06/custom-sub-domain-for-independent-web-app/' not found.
+[2017-06-07 11:40:59] ERROR `/2017/06/flask-sqlalchemy-import-problem/' not found.
+[2017-06-07 12:31:32] ERROR `/2017/06/06/flask-sqlalchemy-import-problem/' not found.
+[2017-06-07 13:18:27] ERROR `/nginx-log-backup' not found.
+[2017-06-07 15:18:34] ERROR `/nginx-log-backup' not found.
+[2017-06-08 00:38:34] ERROR `/robots.txt' not found.
