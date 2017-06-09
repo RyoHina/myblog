@@ -28,7 +28,7 @@ def get_svn_latest_version():
     svn_logs = subprocess.Popen("svn info \"svn://git.oschina.net/kylescript/myblog/_posts\"",
                                 stderr=subprocess.STDOUT,
                                 stdout=subprocess.PIPE, shell=True).communicate()[0]
-    logs = re.compile('Revision: ([\d]+)').findall(svn_logs)
+    logs = re.compile('Last Changed Rev: ([\d]+)').findall(svn_logs)
     if isinstance(logs, list):
         if len(logs) > 0:
             return int(logs[0])
