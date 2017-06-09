@@ -41,11 +41,11 @@ def get_abspath():
 
 def svn_checkout():
     # clean tmp dir
-    if os.path.isdir(get_abspath() + '/_post'):
-        shutil.rmtree(get_abspath() + '/_post')
+    if os.path.isdir(get_abspath() + '/_posts'):
+        shutil.rmtree(get_abspath() + '/_posts')
 
     # check out
-    subprocess.Popen("svn co \"svn://git.oschina.net/kylescript/myblog/_posts\" _post",
+    subprocess.Popen("svn co \"svn://git.oschina.net/kylescript/myblog/_posts\" _posts",
                      stderr=subprocess.STDOUT,
                      stdout=subprocess.PIPE, shell=True).communicate()
 
