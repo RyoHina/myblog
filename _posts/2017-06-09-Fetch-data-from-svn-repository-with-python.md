@@ -8,4 +8,4 @@ tags: python linux svn
 * content
 {:toc}
 
-一会再写。
+一会再写吧。
