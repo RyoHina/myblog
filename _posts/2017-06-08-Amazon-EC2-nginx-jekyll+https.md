@@ -37,7 +37,6 @@ tags: jekyll EC2 nginx https
 		}
 	}
 	
-	
 	server {
 		listen 80;
 		server_name kyle.net.cn;
@@ -52,3 +51,45 @@ proxy_pass 转发本地9001端口是因为jekyll项目 _config.yml有如下配�
 然后把80端口转发到https就一切搞定啦！
 
 在此期间遇到一个问题一直没有调通，原来Amazon EC2服务器没有开433端口！！！尴尬，瞬间想撞墙！！！
+
+接下来去[https://www.ssllabs.com/](https://www.ssllabs.com/)做一个检测，发现评分是F！！！
+于是查了一些资料做了一些nginx修改：
+
+	server {
+		listen 443 ssl http2;
+		listen [::]:443 ssl http2;
+		server_name kyle.net.cn www.kyle.net.cn;
+		access_log /home/myblog/nginx_access.log;
+		error_log /home/myblog/nginx_error.log;
+		root /home/myblog;
+		
+		ssl on;
+		ssl_certificate /home/myblog/cert.pem;
+		ssl_certificate_key /home/myblog/cert.key;
+		ssl_dhparam /home/myblog/dhparam.pem;
+		ssl_protocols TLSv1.2 TLSv1.1 TLSv1;
+		ssl_ciphers EECDH+AESGCM:EDH+AESGCM:EECDH:EDH:!MD5:!RC4:!LOW:!MEDIUM:!CAMELLIA:!ECDSA:!DES:!DSS:!3DES:!NULL;
+		ssl_prefer_server_ciphers on;
+
+		ssl_session_cache off;
+		ssl_session_timeout 10m;
+		ssl_session_tickets off;
+		
+		add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
+		add_header X-Frame-Options DENY;
+		add_header X-Content-Type-Options nosniff;
+		
+		location / {
+			proxy_pass http://localhost:9001;
+		}
+	}
+
+	server {
+		listen 80;
+		listen [::]:80;
+		server_name kyle.net.cn www.kyle.net.cn;
+		return 301 https://$server_name$request_uri;
+	}
+
+附一张图：
+![](http://or9erg8ii.bkt.clouddn.com/ssllabs-A+)
