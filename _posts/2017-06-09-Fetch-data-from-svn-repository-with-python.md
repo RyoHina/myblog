@@ -8,4 +8,4 @@ tags: python linux svn
 * content
 {:toc}
 
-一会再写吧。
+一会再写吧。测试成功拉，提交svn后，blog自动更新！！
