@@ -6,10 +6,13 @@ import re
 import shutil
 import subprocess
 
+FLAG_FILE = os.path.dirname(os.path.abspath(__file__)) + '/ver.txt'
+POST_DIR = os.path.dirname(os.path.abspath(__file__)) + '/_posts'
+
 
 def get_local_ver():
-    if os.path.isfile("ver.txt"):
-        rf = open("ver.txt", 'r')
+    if os.path.isfile(FLAG_FILE):
+        rf = open(FLAG_FILE, 'r')
         line = rf.readline()
         if len(line) > 0:
             return int(line)
@@ -17,9 +20,9 @@ def get_local_ver():
 
 
 def set_local_ver(ver):
-    if os.path.isfile("ver.txt"):
-        os.remove("ver.txt")
-    wf = open("ver.txt", 'w')
+    if os.path.isfile(FLAG_FILE):
+        os.remove(FLAG_FILE)
+    wf = open(FLAG_FILE, 'w')
     wf.write(str(ver))
     wf.close()
 
@@ -35,17 +38,13 @@ def get_svn_latest_version():
     return 0
 
 
-def get_abspath():
-    return os.path.dirname(os.path.abspath(__file__))
-
-
 def svn_checkout():
     # clean tmp dir
-    if os.path.isdir(get_abspath() + '/_posts'):
-        shutil.rmtree(get_abspath() + '/_posts')
+    if os.path.isdir(POST_DIR):
+        shutil.rmtree(POST_DIR)
 
     # check out
-    subprocess.Popen("svn co \"svn://git.oschina.net/kylescript/myblog/_posts\" " + get_abspath() + '/_posts',
+    subprocess.Popen("svn co \"svn://git.oschina.net/kylescript/myblog/_posts\" " + POST_DIR,
                      stderr=subprocess.STDOUT,
                      stdout=subprocess.PIPE, shell=True).communicate()
 
