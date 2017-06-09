@@ -45,7 +45,7 @@ def svn_checkout():
         shutil.rmtree(get_abspath() + '/_posts')
 
     # check out
-    subprocess.Popen("svn co \"svn://git.oschina.net/kylescript/myblog/_posts\" _posts",
+    subprocess.Popen("svn co \"svn://git.oschina.net/kylescript/myblog/_posts\" " + get_abspath() + '/_posts',
                      stderr=subprocess.STDOUT,
                      stdout=subprocess.PIPE, shell=True).communicate()
 
