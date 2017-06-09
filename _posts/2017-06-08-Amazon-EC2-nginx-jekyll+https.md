@@ -52,7 +52,7 @@ proxy_pass 转发本地9001端口是因为jekyll项目 _config.yml有如下配�
 
 在此期间遇到一个问题一直没有调通，原来Amazon EC2服务器没有开433端口！！！尴尬，瞬间想撞墙！！！
 
-接下来去[https://www.ssllabs.com/](https://www.ssllabs.com/)做一个检测，发现评分是F！！！
+接下来去[https://www.ssllabs.com/](https://www.ssllabs.com/)做一个检测，发现竟然评分是F！！！
 于是查了一些资料做了一些nginx修改：
 
 	server {
