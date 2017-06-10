@@ -23,7 +23,7 @@ Web Server验证用户登录成功后，拿到了用户登录凭据(能够唯一
 	
 	# rc4流加密算法
 	def rc4(data, key):
-	    &quot;&quot;&quot;RC4 encryption and decryption method.&quot;&quot;&quot;
+	    '''RC4 encryption and decryption method.'''
 	    S, j, out = list(range(256)), 0, []
 	
 	    for i in range(256):
@@ -37,7 +37,7 @@ Web Server验证用户登录成功后，拿到了用户登录凭据(能够唯一
 	        S[i], S[j] = S[j], S[i]
 	        out.append(chr(ord(ch) ^ S[(S[i] + S[j]) % 256]))
 	
-	    return &quot;&quot;.join(out)
+	    return ''.join(out)
 
 
 	# 加密字符串
