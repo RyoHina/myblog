@@ -69,7 +69,7 @@ tags: flask ubuntu nginx uwsgi mysql
 	from flask import Flask
 	app = Flask(__name__)
 	
-	@app.route(&quot;/&quot;)
+	@app.route('/')
 	def hello():
 	    return 'Hello, Flask!'
 
@@ -87,4 +87,4 @@ tags: flask ubuntu nginx uwsgi mysql
 	pip install mysql-python
 
 
-在shell中输入python，打开python交互窗口，执行&quot;import MySQLdb&quot;(注意大小写)不报错的话，就证明安装好了。
+在shell中输入python，打开python交互窗口，执行'import MySQLdb'(注意大小写)不报错的话，就证明安装好了。
