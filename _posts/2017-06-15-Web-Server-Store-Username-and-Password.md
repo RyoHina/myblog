@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Web服务器怎么保存用户名密码？"
-categories: security
-tags: webserver
+categories: algorithm
+tags: algorithm security
 ---
 
 * content
