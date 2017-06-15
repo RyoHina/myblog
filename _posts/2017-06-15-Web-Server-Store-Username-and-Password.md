@@ -43,10 +43,10 @@ Web服务器用户名密码存储方式不当导致的信息安全事故时有�
 	
 
 	def get_real_pass(p):
-		# 原本客户端计算
-		md5str = hex_md5(p + "salt1-hard to guess...").toLowerCase();
-		md5str = hex_md5(md5str + "salt2-hard to guess...").toLowerCase();
-		# 原本服务器端计算
+		# 原本只在客户端计算
+		md5str = hex_md5(p + "client salt1 hard to guess...").toLowerCase();
+		md5str = hex_md5(md5str + "client salt2 hard to guess...").toLowerCase();
+		# 原本只在服务器端计算
 		md5str = hex_md5(md5str + "server salt1 hard to guess...").toLowerCase();
 		md5str = hex_md5(md5str + "server salt2 hard to guess...").toLowerCase();
 		return md5str
