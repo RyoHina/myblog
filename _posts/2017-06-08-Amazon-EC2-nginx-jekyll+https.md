@@ -92,4 +92,4 @@ proxy_pass 转发本地9001端口是因为jekyll项目 _config.yml有如下配�
 	}
 
 附一张图：
-![](http://blog.kyle.net.cn/ssllabs-A+)
+![](http://or9erg8ii.bkt.clouddn.com/ssllabs-A+.png)
