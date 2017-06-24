@@ -23,10 +23,10 @@ tags: sqlite
 	CREATE TABLE user (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(60));
 	REPLACE INTO sqlite_sequence (name, seq) VALUES ('user', 999);
 
-网上有人说 REPLACE INTO 这句可以换成下面这句，我试了并不行
-因为此时sqlite_sequence表还没有name='user'数据，UPDATE语句执行失败了。
-而 REPLACE INTO的语义是存在则修改，不存在则插入。
 
+网上有人说 REPLACE INTO 这句可以换成下面这句，我试了并不行。因为此时sqlite_sequence表还没有name='user'数据，UPDATE语句执行失败了。而 REPLACE INTO的语义是存在则修改，不存在则插入。
+
+	//不要用UPDATE, 推荐使用 REPLACE INTO
 	UPDATE SQLITE_SEQUENCE SET seq = 999 WHERE name = 'user';
 
 
