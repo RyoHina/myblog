@@ -29,7 +29,7 @@ tags: shadowsocks-server
 4.写一个执行脚本shadowsocks.sh, 然后对这个脚本加上执行权限 "chmod 777 shadowsocks.sh", 脚本内容如下： 
 
 	# 这里为什么要写ssserver全路径呢， 是因为crontab开机启动的时找不到ssserver路径
-	/usr/local/bin/ssserver -p 22222 -k yourpassword -m aes-256-cfb --workers 10 -v -d start	
+	/usr/local/bin/ssserver -p 22222 -k your_password -m aes-256-cfb --workers 10 -v -d start	
 	
 5.加入开机启动
 
@@ -42,7 +42,7 @@ tags: shadowsocks-server
 
 	配置ip： 你服务器的ip
 	配置端口：22222
-	密码：yourpassword
+	密码：your_password
 	加密方法：aes-256-cfb
 
 好了，可以愉快的翻墙了。。。
