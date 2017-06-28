@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "怎样在Ubuntu系统快速搭建shadowsocks server？"
-categories: shadowsocks-server
+categories: shadowsocks
 tags: shadowsocks-server
 ---
 
