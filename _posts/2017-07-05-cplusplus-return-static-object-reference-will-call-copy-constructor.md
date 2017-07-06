@@ -18,6 +18,10 @@ static RoomManager& getInstance() {
 };
 ```
 
+
+<!--more-->
+
+
 我看了一下，感觉应该没有问题，调试发现每次调用getInstance返回的竟然不是同一个对象，于是写了个例子
 ```
 #include "stdio.h"
