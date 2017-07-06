@@ -88,3 +88,26 @@ static RoomManager* getInstance() {
 	return &mgr;
 };
 ```
+
+----- 更新 -----：
+其实拷贝构造函数，是"auto a=..."赋值引起的，并不是“返回静态局部对象引用”会返回一个拷贝构造临时对象。好久不写c++都忘了。。。
+原始的写法，把main修改为这样就不会有问题。
+```
+int main()
+{
+	RoomManager::getInstance().test();
+	//a.test();
+	RoomManager::getInstance().test();
+	//b.test();
+
+    return 0;
+}
+```
+其实是单例应该把 构造函数，拷贝构造函数，赋值运算符都设置为私有的，比如这样：
+```
+private:
+  RoomManager() { printf("Roommanager() default.\n"); }
+  RoomManager(const RoomManager&);
+  RoomManager & operator=(const RoomManager&); 
+```
+这样，“auto a=RoomManager::getInstance();”就会报错，在编译阶段就可以避免一些可能出现的问题。
