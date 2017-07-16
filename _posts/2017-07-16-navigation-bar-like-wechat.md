@@ -116,7 +116,7 @@ tags: html css
             }
 
             //设置home默认active
-            nav_set_home_btn_active();
+            $("#nav-home").attr("src", "https://blog.kyle.net.cn/nav-bar/home-active.png");
         </script>
 </body>
 
