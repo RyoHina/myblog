@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "html使用js设置radio类型input控件选中的两种方法"
-categories: mysql
-tags: mysql
+categories: html
+tags: html radio
 ---
 
 * content
