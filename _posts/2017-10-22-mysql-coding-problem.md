@@ -10,20 +10,28 @@ tags: mysql ubuntu
 
 打开 /etc/mysql/mysql.conf.d/mysqld.cnf
 添加：
+```
 character_set_server = utf8
+```
 
 打开 /etc/mysql/conf.d/mysql.cnf
 添加：
+```
 [mysql]
 default-character-set = utf8
 
 [client]
 default-character-set = utf8
+```
 
 重启mysql服务
+```
 service mysql restart
+```
 
-进入mysql检查, 如下所示表示修改好了
+进入mysql检查, 如下所示则表示改好了
+
+```
 mysql> show variables like 'collation%';
 +----------------------+-----------------+
 | Variable_name        | Value           |
@@ -48,4 +56,4 @@ mysql> show variables like 'char%';
 | character_sets_dir       | /usr/share/mysql/charsets/ |
 +--------------------------+----------------------------+
 8 rows in set (0.01 sec)
-
+```
