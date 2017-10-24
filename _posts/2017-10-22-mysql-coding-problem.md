@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ubuntu下解决mysql编码问题
+title: "Ubuntu下解决mysql编码问题"
 categories: mysql
 tags: mysql ubuntu
 ---
