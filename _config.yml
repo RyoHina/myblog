@@ -29,9 +29,12 @@ twitter_username:
 description_footer: 
 
 # comments
-# 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: #hygblog
-disqus_shortname: kylescript
+coding_comments:
+    owner: 'kylescript'
+    repo: 'myblog'
+    oauth:
+        client_id: '06c591b7ee759a46b1cb61f3f4355729'
+        client_secret: 'e0ba24ad8b6e42999e972a8c0fccb3c2c043e312'
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
