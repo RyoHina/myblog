@@ -33,4 +33,4 @@ type: page
 
 ### Comments
 
-{% include comments.html %}
+{% include coding-comments.html %}
