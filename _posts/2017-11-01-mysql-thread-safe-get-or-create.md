@@ -8,7 +8,7 @@ tags: mysql
 * content
 {:toc}
 
-MySQL数据库如何创建一个线程安全的get_or_create方法？
+#### MySQL数据库如何创建一个线程安全的get_or_create方法？
 
 ```
 # 这里用到了sqlalchemy
@@ -27,3 +27,15 @@ def get_or_create(param1):
     return None
 ```
 SQL语句‘LOCK TABLES table_name WRITE;’不能重入，保证了被lock/unlock包裹的代码段只能同时被一个线程执行。
+
+#### MySQL数据库如何创建一个线程安全的某字段自增方法？
+
+```
+def increase(uid):
+    try:
+		User.query.filter_by(userid=uid).update({"money":User.money + 1})
+		db.session.commit()
+	except Exception, e:
+        logging.error("xxx.py increase exception:" + str(e))
+    return None
+```
