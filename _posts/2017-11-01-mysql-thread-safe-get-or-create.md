@@ -32,10 +32,10 @@ SQL语句‘LOCK TABLES table_name WRITE;’不能重入，保证了被lock/unlo
 
 ```
 def increase(uid):
-    try:
+	try:
 		User.query.filter_by(userid=uid).update({"money":User.money + 1})
 		db.session.commit()
 	except Exception, e:
-        logging.error("xxx.py increase exception:" + str(e))
-    return None
+		logging.error("xxx.py increase exception:" + str(e))
+	return None
 ```
