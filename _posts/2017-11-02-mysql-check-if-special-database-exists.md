@@ -24,7 +24,7 @@ python版sqlalchemy实现：
 		# NOT exist
 		pass
 	conn.close()
-```
+``` 
 
 第二种方法是在sqlalchemy-utils包源码中学到的，代码如下
 
