@@ -8,7 +8,11 @@ tags: flask-sqlalchemy
 * content
 {:toc}
 
-今天项目在做测试的时候发现了一个日志报错。报错内容是“This result object does not return rows. It has been closed automatically”，而报错的位置确是最普通的一些查询操作，非常诡异。搜索了半天没有什么收获。
+今天项目在做测试的时候发现了一个日志报错。报错内容是“This result object does not return rows. It has been closed automatically”，而报错的位置确是最普通的一些查询操作，非常诡异。
+我的生产环境是Ubuntu + nginx + uwsgi, uwsgi执行脚本如下(注意多线程环境)：
+```
+uwsgi --socket 127.0.0.1:9001 --chdir mysite --wsgi-file flask_app.py --callable app --pidfile /home/labor/pidfile.pid --master --processes 2 --threads 2
+```
 
 示例代码如下：
 
