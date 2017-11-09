@@ -50,8 +50,25 @@ def add_system_log(stype, timestamp, description, ip, user_agent):
 
 我仔细对比了官方给的例子发现例子中并没有db.app = app这句话。但是我去掉这句话后，add_system_log就会报错，报错内容是“application not registered on db instance and no applicationbound to current context”。
 
-经过大量测试，发现了一个可以解决问题的方案:
-1. 去掉db.app = app
-2. 去掉add_system_log (不能在项目启动过程中操作数据库, 启动完成后，在get/post请求中操作)
+经过一些资料查找，找到了两个解决方案:
+##### 方案1：
+```
+1). 去掉db.app = app
+2). 去掉add_system_log 
+缺点：不能在项目启动过程中操作数据库, 启动完成后，在get/post请求中操作
+```
 
-但是我还是不知道什么原因导致最开始的报错，猜测是db对象(即SQLAlchemy对象)还没初始化完全就开始使用，从而导致后面的一些报错。
+##### 方案2：
+```
+修改uwsgi执行脚本(添加了 --enable-threads --lazy-apps)：
+uwsgi --socket 127.0.0.1:9001 --chdir mysite --wsgi-file flask_app.py --callable app --pidfile /home/labor/pidfile.pid --master --processes 2 --threads 2 --enable-threads --lazy-apps
+缺点：第一次启动会有数据库不存在的exception，后续每次启动会有两条'服务器启动成功'日志。
+```
+
+我最终选择用方案2.
+
+参考资料：
+1. [https://stackoverflow.com/questions/20933018/random-errors-with-sqlalchemy](https://stackoverflow.com/questions/20933018/random-errors-with-sqlalchemy)
+2. [https://stackoverflow.com/questions/17317344/celery-and-sqlalchemy-this-result-object-does-not-return-rows-it-has-been-clo](https://stackoverflow.com/questions/17317344/celery-and-sqlalchemy-this-result-object-does-not-return-rows-it-has-been-clo)
+3. [http://docs.sqlalchemy.org/en/latest/faq/connections.html#mysql-server-has-gone-away](http://docs.sqlalchemy.org/en/latest/faq/connections.html#mysql-server-has-gone-away)
+4. [https://stackoverflow.com/questions/44476678/uwsgi-lazy-apps-and-threadpool](https://stackoverflow.com/questions/44476678/uwsgi-lazy-apps-and-threadpool)
