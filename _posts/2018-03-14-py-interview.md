@@ -224,15 +224,16 @@ def reversed_cmp(x, y):
 def scq(N):
   for i in range(N):
     yield i * 2
-
 for i in scq(5):
   print i
 ```
 
 2. 生成器表达式
 使用列表推倒， 将会一次产生所有结果
+```
 s = [x*2 for x in range(5)]
 print(s) # [0,2,4,6,8]
+```
 
 将[] => ()，返回生成器表达式
 s = (x*2 for x in range(5))
