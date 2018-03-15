@@ -91,9 +91,12 @@ class MyClass(metaclass=Singleton):
 
 ### 2. 什么是lambda函数
 lambda表达式通常是在需要一个函数，但又不想费神去命名一个函数的场景使用，也就是匿名函数。
+
 例如：
+```
 add = lambda x,y: x+y
 add(1,2) # result = 3
+```
 
 ### 3. python是如何进行内存管理的？
 主要有两点 
@@ -149,10 +152,11 @@ WSGI的全称为： PythonWeb Server Gateway Interface v1.0 （Python Web 服务
 WSGI 的目标，是要建立一个简单的普遍适用的服务器与 WEB 框架之间的接口。
 
 ### 7. python代码得到列表list的交集与并集
-b1 = [1,2,3]
-b2 = [2,3,4]
+a = [1,2,3]
+
+b = [2,3,4]
 # 交集
-print([item for item in b1 if item in b2 ])
+print([item for item in a if item in b ])
 # 并集
 print list(set(a).union(set(b)))
 
