@@ -79,3 +79,52 @@ class MyThread(threading.Thread):
             mutex.release()
 ```
 发现这样依然有问题，最后total出来的数据也不是100的整数。。。为什么呢？
+后来我写了这样一段代码：
+```
+# Not work for windows
+import fcntl
+class FLock(object):
+    def __init__(self, lock_file):
+        self.lock_file = "/tmp/" + lock_file
+
+    def require(self):
+        self.fn = open(self.lock_file, "w")
+        fcntl.flock(self.fn.fileno(), fcntl.LOCK_EX)
+
+    def release(self):
+        self.fn.close()
+
+
+mutex = FLock("pis-project")
+
+mutex.require()
+print("require")
+
+mutex.require()
+print("require")
+
+mutex.release()
+print("release")
+```
+发现竟然能一路跑下来， 恍然大悟，原来我们的文件锁可以锁进程，但无法锁同一个进程里的不同线程。
+所以再加一个线程锁，最终版本是这样的：
+```
+# Not work for windows
+import fcntl
+import threading
+class FLock(object):
+    def __init__(self, lock_file):
+        self.lock_file = "/tmp/" + lock_file
+        self.thread_lock = threading.Lock()
+
+    def require(self):
+        self.thread_lock.acquire()
+        self.fn = open(self.lock_file, "w")
+        fcntl.flock(self.fn.fileno(), fcntl.LOCK_EX)
+
+    def release(self):
+        self.fn.close()
+        self.thread_lock.release()
+```
+
+这样测试下来，total始终是100的整数，说明我们的锁是正确的。
