@@ -128,3 +128,21 @@ class FLock(object):
 ```
 
 这样测试下来，total始终是100的整数，说明我们的锁是正确的。
+那能否使用multiprocessing.Lock + threading.Lock 实现需求呢？
+```
+import multiprocessing
+import threading
+class FLock(object):
+    def __init__(self):
+        self.thread_lock = threading.Lock()
+        self.process_lock = multiprocessing.Lock()
+
+    def require(self):
+        self.thread_lock.acquire()
+        self.process_lock.acquire()
+
+    def release(self):
+        self.process_lock.release()
+        self.thread_lock.release()
+```
+经过测试发现这样也是正确的。结论是如果没有多线程，只用一个进程锁就可以了。 如果是多进程+多线程就必须要两个锁了。
