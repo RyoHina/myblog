@@ -145,35 +145,35 @@ class FLock(object):
         self.process_lock.release()
         self.thread_lock.release()
 ```
-经过测试发现这样也是正确的。结论是如果没有多线程，只用一个进程锁就可以了。 如果是多进程+多线程就必须要两个锁了。
-
-可以把这段代码写成一个装饰器, 并加上try/finally:
+经过测试发现这样是不可以的。我们无法在主进程中创建一个锁，之后在子进程中直接使用。
 ```
-
-class GobalLock(object):
-    def __init__(self):
+# 最终可用的版本
+import fcntl
+import threading
+class FLock(object):
+    def __init__(self, lock_file):
+        self.lock_file = "/tmp/" + lock_file
         self.thread_lock = threading.Lock()
-        self.process_lock = multiprocessing.Lock()
 
-    def acquire(self):
+    def require(self):
         self.thread_lock.acquire()
-        self.process_lock.acquire()
+        self.fn = open(self.lock_file, "w")
+        fcntl.flock(self.fn.fileno(), fcntl.LOCK_EX)
 
     def release(self):
-        self.process_lock.release()
+        self.fn.close()
         self.thread_lock.release()
 
 
-gobal_lock = GobalLock()
-
+g_k = FLock("__some_name__")
 
 def g_lock(fp):
     def _d(*args, **kw):
         try:
-            gobal_lock.acquire()
+            g_k.acquire()
             r = fp(*args, **kw)
         finally:
-            gobal_lock.release()
+            g_k.release()
         return r
     return _d
 
@@ -181,5 +181,3 @@ def g_lock(fp):
 def need_lock_func():
 	pass
 ```
-
-在网上看到一句话“在不改变gunicorn源码的情况下，我们无法在主进程中创建一个锁，之后在子进程中直接使用。” 也不清除这是真的假的，我一直用uwsgi，等有空研究下gunicorn部署flask，验证下这句话是否正确。（待续）
