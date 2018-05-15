@@ -23,3 +23,12 @@ nginx对应也会出现错误***** upstream time out，报错信息为：
 	net.core.netdev_max_backlog = 65536
 
 修改完成之后要记得 sysctl -p 重新加载参数，另外调大uwsgi配置中 --listen=1024的数目是提高并发能力最有效的办法
+
+2018.5.15更新：
+报错：(2003, "Can't connect to MySQL server on 'localhost' ([Errno 99] Cannot assign requested address)")
+修复方法：
+net.ipv4.tcp_tw_reuse = 1
+
+参考：
+https://stackoverflow.com/questions/24884438/2003-cant-connect-to-mysql-server-on-127-0-0-13306-99-cannot-assign-reques
+https://www.percona.com/blog/2014/12/08/what-happens-when-your-application-cannot-open-yet-another-connection-to-mysql/
