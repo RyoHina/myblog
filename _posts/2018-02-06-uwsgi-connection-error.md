@@ -27,8 +27,7 @@ nginx对应也会出现错误***** upstream time out，报错信息为：
 2018.5.15更新：
 
 	报错：(2003, "Can't connect to MySQL server on 'localhost' ([Errno 99] Cannot assign requested address)")
-修复方法：
-
+	修复方法：
 	net.ipv4.tcp_tw_reuse = 1
 
 参考：
