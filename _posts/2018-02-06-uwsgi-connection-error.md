@@ -46,3 +46,4 @@ nginx对应也会出现错误***** upstream time out，报错信息为：
 	https://stackoverflow.com/questions/24884438/2003-cant-connect-to-mysql-server-on-127-0-0-13306-99-cannot-assign-reques
 	https://www.percona.com/blog/2014/12/08/what-happens-when-your-application-cannot-open-yet-another-connection-to-mysql/
 	https://serverfault.com/questions/829072/cant-connect-to-mysql-server-mysql-server-ip-99
+	https://blog.csdn.net/tenfyguo/article/details/8499248
