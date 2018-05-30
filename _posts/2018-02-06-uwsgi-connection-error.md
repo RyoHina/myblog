@@ -41,9 +41,37 @@ nginx对应也会出现错误***** upstream time out，报错信息为：
 	net.core.wmem_max=8388608
 	net.core.rmem_max=8388608
 	
+	
+2018.05.30 更新
+修改max_connections
+Ubuntu has moved from Upstart to Systemd from version 15.04 and no longer respects the limits in /etc/security/limits.conf for system services. These limits now apply only to user sessions.
+
+The limits for the MySQL service are defined in the Systemd configuration file, which you should copy from its default location into /etc/systemd and then edit the copy.
+
+sudo cp /lib/systemd/system/mysql.service /etc/systemd/system/
+sudo vim /etc/systemd/system/mysql.service # or your editor of choice
+Add the following lines to the bottom of the file:
+
+LimitNOFILE=infinity
+LimitMEMLOCK=infinity
+You could also set a numeric limit, eg LimitNOFILE=4096
+
+Now reload the Systemd configuration with:
+
+sudo systemctl daemon-reload
+Restart MySQL and it should now obey the max_connections directive.
+
+然后
+/etc/mysql/mysql.conf.d/mysqld.cnf
+添加 
+[mysqld]
+max_connections         = 5000
+max_connect_errors      = 10000
+
 参考：
 
 	https://stackoverflow.com/questions/24884438/2003-cant-connect-to-mysql-server-on-127-0-0-13306-99-cannot-assign-reques
 	https://www.percona.com/blog/2014/12/08/what-happens-when-your-application-cannot-open-yet-another-connection-to-mysql/
 	https://serverfault.com/questions/829072/cant-connect-to-mysql-server-mysql-server-ip-99
 	https://blog.csdn.net/tenfyguo/article/details/8499248
+	https://www.digitalocean.com/community/questions/max_connections-will-not-change-in-ubuntu
