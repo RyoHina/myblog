@@ -30,6 +30,17 @@ nginx对应也会出现错误***** upstream time out，报错信息为：
 	修复方法：
 	net.ipv4.tcp_tw_reuse = 1
 
+	net.ipv4.tcp_syncookies = 1
+	新的连接可以重新使用TIME-WAIT套接字
+	net.ipv4.tcp_tw_reuse=1
+	启动TIME-WAIT套接字状态的快速循环功能
+	net.ipv4.tcp_tw_recycle=1
+	套接字关闭时，保持FIN-WAIT-2状态的时间
+	net.ipv4.tcp_fin_timeout=30
+	对于所有协议的队列，设置最大系统发送缓存(wmen)和接收缓存(rmem)到8M
+	net.core.wmem_max=8388608
+	net.core.rmem_max=8388608
+	
 参考：
 
 	https://stackoverflow.com/questions/24884438/2003-cant-connect-to-mysql-server-on-127-0-0-13306-99-cannot-assign-reques
