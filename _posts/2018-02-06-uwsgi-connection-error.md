@@ -68,6 +68,8 @@ Restart MySQL and it should now obey the max_connections directive.
 max_connections         = 5000
 max_connect_errors      = 10000
 
+非常重要的一点，重启完mysql后，服务器程序也要重启一下，否则连接池里面可能会有异常的连接！！！！
+
 参考：
 
 	https://stackoverflow.com/questions/24884438/2003-cant-connect-to-mysql-server-on-127-0-0-13306-99-cannot-assign-reques
