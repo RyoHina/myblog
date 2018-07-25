@@ -26,4 +26,4 @@ type: page
 
 ### Comments
 
-{% include coding-comments.html %}
+{% include comments.html %}
