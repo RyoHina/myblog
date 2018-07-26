@@ -48,7 +48,7 @@ tags: html css
 
 结果图：<br>
 
-![](https://blog.kyle.net.cn/child-div.png)
+![](https://blog.kyle.net.cn/child-div.png?imageView2/0/q/70|imageslim)
 
 明明对childdiv设置margin-top自己没生效，却对父div生效。
 这是因为当父级元素没有设置border-top或者padding-top的时候，他的第一个子节点（这里包括元素节点和文本节点）如果设置了margin-top，那么这个margin-top会一层层往上越级直到遇到以下情况之一才停下：<br>

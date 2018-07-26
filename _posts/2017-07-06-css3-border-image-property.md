@@ -48,7 +48,7 @@ code:
 
 图片素材:
 
-![](https://blog.kyle.net.cn/css-border.png)
+![](https://blog.kyle.net.cn/css-border.png?imageView2/0/q/70|imageslim)
 
 
 参考：
