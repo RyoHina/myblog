@@ -75,7 +75,7 @@ Field car in com.example.demo.RichMan required a single bean, but 2 were found:
 	- ferrariCar: defined in file [C:\Users\***\target\classes\com\example\demo\FerrariCar.class]
 ```
 
-意思是自动装载Car时，发现有两个Car实例（BMWCar，FerrariCar）, 不知道怎么办了。为了解决这个问题，我们引入@Qualifier注解，改注解接受一个字符串参数，为bean id。
+意思是自动装载Car时，发现有两个Car实例（BMWCar，FerrariCar）, 不知道怎么办了。为了解决这个问题，我们引入@Qualifier注解，该注解接受一个字符串参数，为bean id。
 
 修改RichMan代码
 ```
@@ -121,4 +121,6 @@ public class BMWCar implements Car, BeanNameAware {
 
 ```
 
-发现果然是@Component默认指定的bean id规则有问题。如果类名两个连续大写字母开头，则bean id与类名保持一致。类名仅第一个字母大写开头，bean id则把类名第一个字母小写后作为bean id。
+发现果然是@Component默认指定的bean id规则并不是无脑把第一个字母小写。
+
+### @Component默认指定的bean id规则: 如果类名由两个连续大写字母开头，则bean id与类名保持一致。否则将类名第一个字母小写作为bean id。
