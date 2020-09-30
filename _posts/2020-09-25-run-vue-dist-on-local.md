@@ -17,3 +17,10 @@ npm i serve -g
 ```
 serve
 ```
+
+还有一种方法，修改vue.config.js，这样打包出来的资源引用就使用相对路径
+```
+module.exports = {
+    "publicPath": ""
+}
+```
