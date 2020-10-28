@@ -30,6 +30,10 @@ tags: node
 	proxy_pass http://127.0.0.1:8090/;
 	
 	否则nginx转发给node应用会带"appservice"路径
+	
+	然后添加一条
+	proxy_set_header X-Forwarded-Proto $scheme;
+	这样，非https连接不会收到set-cookie
 ```
 6. 重启nginx服务。
 这样部署后静态文件直接由nginx处理，带"appservice"前缀的请求通过反向代理转发给node应用处理。
