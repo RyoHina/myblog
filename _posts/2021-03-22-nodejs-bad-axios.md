@@ -8,7 +8,7 @@ tags: node axios
 * content
 {:toc}
 
-1. 在循环中大量执行下面代码后，会卡死，"after axios" 出不来，查了下官方issue，2018年就有人说这事了，后来这个issue被关闭了但问题没有解决，现在都2021年了也没有解决。
+在循环中大量执行下面代码后，会卡死，"after axios" 出不来，查了下官方issue，2015年就有人说这事了，后来这个issue被关闭了但问题没有解决，现在都2021年了也没有解决。
 [查看这个issue](https://github.com/axios/axios/issues/124)
 
 ```
